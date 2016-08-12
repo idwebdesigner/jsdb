@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript Database</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/app_1.min.css" rel="stylesheet">
+        <link href="css/app_2.min.css" rel="stylesheet">
+
+        <script src="js/h5utils.js"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/content-right.html");
+        });</script>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+    <style>.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 200px;;
+}
+    .lcb-navigation a{background:#999999}
+    </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+                <br/><br/>
+                <div style="font-size:10px;margin-left:0px;width:200px;color:#ffffff" class="demo"></div>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Javascript Database<span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a href="market://details?id=id.web.designer.javascriptdatabase"><i class="zmdi zmdi-star"></i> Rate 5 Stars</a>
+                                </li>
+                                <li style="display:none;">
+                                    <a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i> Upgrade</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation" class="active">
+                                            <a class="col-sx-4" href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                                                <i class="zmdi zmdi-home icon-tab"></i>
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                <i class="zmdi zmdi-keyboard icon-tab"></i>
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a class="col-xs-" href="#tab-3" aria-controls="tab-3" role="tab" data-toggle="tab">
+                                                <i class="zmdi zmdi-account icon-tab"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">database</a></li>
+                <li class="active">javascript</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Javascript Database</div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About Javascript</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="market://details?id=id.web.designer.learn.javascript">What's is Javascript?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-sort-asc"></i> Sort by A-Z Category</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-language-javascript"></i> Javascript Database</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Definitive source of the best javascript librartes, framework, &amp; plugins.</div>
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px;" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+
+                            <div class="card w-item">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/2.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Animation
+                                                <small>Posted on 2nd Sep 2015 at 17:00</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Donec velit libero, gravida vel diam ut, lobortis mollis quam. Morbi posuere egestas posuere. Curabitur in dui sollicitudin, lacinia magna at, laoreetsapien. Integer vitae eros nulla.</p>
+
+                                    <div class="table table-responsive">
+                                        <table class="table" style="background:#ffffff;">
+                                            <tbody>
+                                                <tr>
+                                                    <td><div class="c-item" style="margin-left:-20px;">
+                                                        <span class="ci-avatar">
+                                                            <img src="img/animate.jpg" alt="" style="width:200px;">
+                                                        </span>
+                                                    </div></td>
+                                                    <td><div class="c-item" style="margin-left:-20px;">
+                                                        <a href="titan.html" class="ci-avatar">
+                                                            <img src="img/skrollr.jpg" alt="" style="width:200px;">
+                                                        </a>
+                                                    </div></td>
+                                                    <td><div class="c-item" style="margin-left:-20px;">
+                                                        <a href="mongo.html" class="ci-avatar">
+                                                            <img src="img/anime.jpg" alt="" style="width:200px;">
+                                                        </a>
+                                                    </div></td>
+                                                    <td><div class="c-item" style="margin-left:-20px;">
+                                                        <a href="orientdb.html" class="ci-avatar">
+                                                            <img src="img/hover.jpg" alt="" style="width:200px;">
+                                                        </a>
+                                                    </div></td>
+                                                    <td><div class="c-item" style="margin-left:-20px;">
+                                                        <a href="orientdb.html" class="ci-avatar">
+                                                            <img src="img/pace.jpg" alt="" style="width:200px;">
+                                                        </a>
+                                                    </div></td>
+                                                    <td><div class="c-item" style="margin-left:-20px;margin-right:-30px;">
+                                                        <a href="editorchoice.html" class="ci-avatar">
+                                                            <img src="img/effeckt.jpg" alt="" style="width:200px;">
+                                                        </a>
+                                                    </div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 20</span>
+                                            <span class="active"><i class="zmdi zmdi-favorite"></i> 78</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/2.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/3.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment Listing -->
+                                    <div class="list-group">
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left"><img src="img/profile-pics/3.jpg" alt="" class="lgi-img"></a>
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Animate.css <small class="text-muted m-l-10">1 hour ago</small></a>
+                                                <small class="lgi-text">Cross-browser CSS3 animations. Plug and play. Do a little dance.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card w-item">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/5.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Morgan Francis
+                                                <small>Posted on 2nd Sep 2015 at 17:00</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Donec velit libero, gravida vel diam ut, lobortis mollis quam. Morbi posuere egestas posuere. Curabitur in dui sollicitudin, lacinia magna at, laoreet sapien. Integer vitae eros nulla.</p>
+
+                                    <div class="wi-preview lightbox clearfix">
+                                        <div class="wip-item" data-src="media/gallery/4.jpg"
+                                             style="background-image: url(media/gallery/4.jpg);">
+                                            <img src="media/gallery/thumbs/4.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/5.jpg"
+                                             style="background-image: url(media/gallery/5.jpg);">
+                                            <img src="media/gallery/thumbs/5.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/6.jpg"
+                                             style="background-image: url(media/gallery/6.jpg);">
+                                            <img src="media/gallery/thumbs/6.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 20</span>
+                                            <span class="active"><i class="zmdi zmdi-favorite"></i> 78</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/2.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/3.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment Listing -->
+                                    <div class="list-group">
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/3.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Samantha Diaz <small class="c-gray m-l-10">1 hour ago...</small></a>
+                                                <small class="lgi-text">Pellentesque mollis fringilla finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/2.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>William Morrison
+                                                <small>Posted on 3rd July 2015 at 7:00</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Nullam dignissim, metus et feugiat porttitor.</p>
+
+                                    <div class="wi-preview lightbox clearfix">
+                                        <div class="wip-item" data-src="media/gallery/6.jpg"
+                                             style="background-image: url(media/gallery/6.jpg);">
+                                            <img src="media/gallery/thumbs/6.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/7.jpg"
+                                             style="background-image: url(media/gallery/7.jpg);">
+                                            <img src="media/gallery/thumbs/7.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/8.jpg"
+                                             style="background-image: url(media/gallery/8.jpg);">
+                                            <img src="media/gallery/thumbs/8.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/9.jpg"
+                                             style="background-image: url(media/gallery/9.jpg);">
+                                            <img src="media/gallery/thumbs/5.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 100</span>
+                                            <span class="active"><i class="zmdi zmdi-favorite"></i> 2432</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/1.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/7.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/9.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/8.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment Listing -->
+                                    <div class="list-group">
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/9.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Finn Walking <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Per conubia nostra.</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/8.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Benn Holder <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Class aptent taciti sociosqu ad litora torquent per conubia nostra...</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/3.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Seam Ford <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Praesent bibendum vulputate nulla vitae euismod. Fusce a metus eu ante sagittis viverra sit amet sed odio.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/7.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Johnni Schmidt
+                                                <small>2nd on Jul 2015 at 02:10</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Morbi non eros nibh. Suspendisse ac nunc faucibus turpis pretium pretium. Nulla metus dui, convallis in lorem id, sodales tincidunt magna....</p>
+
+                                    <div class="wi-preview lightbox clearfix">
+                                        <div class="wip-item" data-src="media/gallery/10.jpg"
+                                             style="background-image: url(media/gallery/10.jpg);">
+                                            <img src="media/gallery/thumbs/10.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/11.jpg"
+                                             style="background-image: url(media/gallery/11.jpg);">
+                                            <img src="media/gallery/thumbs/11.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/12.jpg"
+                                             style="background-image: url(media/gallery/12.jpg);">
+                                            <img src="media/gallery/thumbs/12.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/13.jpg"
+                                             style="background-image: url(media/gallery/13.jpg);">
+                                            <img src="media/gallery/thumbs/13.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/14.jpg"
+                                             style="background-image: url(media/gallery/14.jpg);">
+                                            <img src="media/gallery/thumbs/14.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 2</span>
+                                            <span><i class="zmdi zmdi-favorite"></i> 10</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/4.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/8.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment Listing -->
+                                    <div class="list-group">
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/8.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Jhon Sheamus <small class="c-gray m-l-10">2nd July 2015...</small></a>
+                                                <small class="lgi-text">Vivamus vitae sapien et diam convallis hendrerit et eu leo. Nullam dignissim, metus et feugiat porttitor, nulla metus dapibus est, id eleifend nisi massa ac ante.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/6.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Sham Alexander
+                                                <small>Posted on 30th July 2015 at 7:02</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Praesent sollicitudin venenatis mi, sed consectetur quam accumsan sollicitudin. Aenean ornare tincidunt odio luctus sagittis. Sed vehicula odio eu tortor iaculis, vel lobortis ipsum interdum. Vivamus vitae efficitur elit, in commodo nulla. Fusce ut odio blandit, feugiat mi vitae, pharetra neque. Mauris laoreet commodo augue eget ornare. Vestibulum hendrerit, turpis eget tristique consequat, risus risus dapibus augue, nec commodo nisi nunc mattis dui. Curabitur tempus nibh eget interdum faucibus.</p>
+
+                                    <div class="wi-preview lightbox clearfix">
+                                        <div class="wip-item" data-src="media/gallery/15.jpg"
+                                             style="background-image: url(media/gallery/15.jpg);">
+                                            <img src="media/gallery/thumbs/15.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/16.jpg"
+                                             style="background-image: url(media/gallery/16.jpg);">
+                                            <img src="media/gallery/thumbs/16.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/17.jpg"
+                                             style="background-image: url(media/gallery/17.jpg);">
+                                            <img src="media/gallery/thumbs/17.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/18.jpg"
+                                             style="background-image: url(media/gallery/18.jpg);">
+                                            <img src="media/gallery/thumbs/18.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/19.jpg"
+                                             style="background-image: url(media/gallery/19.jpg);">
+                                            <img src="media/gallery/thumbs/19.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/20.jpg"
+                                             style="background-image: url(media/gallery/20.jpg);">
+                                            <img src="media/gallery/thumbs/20.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 0</span>
+                                            <span><i class="zmdi zmdi-favorite"></i> 0</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/6.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/2.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Shane Wtson
+                                                <small>Posted on 20th July 2015 at 7:00</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body card-padding">
+                                    <p>Donec a ipsum eu tellus auctor sodales. Nulla facilisi. Praesent et ex finibus, tempor arcu interdum, facilisis mi. Nunc blandit hendrerit nulla, sed rutrum risus. Nulla eu mollis massa, et laoreet nulla. Ut ut dolor et arcu eleifend elementum ut eget tellus. Vestibulum eu hendrerit mauris. Suspendisse id tortor vel nisl tincidunt interdum.</p>
+
+                                    <div class="wi-preview lightbox clearfix">
+                                        <div class="wip-item" data-src="media/gallery/6.jpg"
+                                             style="background-image: url(media/gallery/6.jpg);">
+                                            <img src="media/gallery/thumbs/6.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/7.jpg"
+                                             style="background-image: url(media/gallery/7.jpg);">
+                                            <img src="media/gallery/thumbs/7.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/8.jpg"
+                                             style="background-image: url(media/gallery/8.jpg);">
+                                            <img src="media/gallery/thumbs/8.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/9.jpg"
+                                             style="background-image: url(media/gallery/9.jpg);">
+                                            <img src="media/gallery/thumbs/9.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/10.jpg"
+                                             style="background-image: url(media/gallery/10.jpg);">
+                                            <img src="media/gallery/thumbs/10.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/11.jpg"
+                                             style="background-image: url(media/gallery/11.jpg);">
+                                            <img src="media/gallery/thumbs/11.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/12.jpg"
+                                             style="background-image: url(media/gallery/12.jpg);">
+                                            <img src="media/gallery/thumbs/12.jpg" alt="">
+                                        </div>
+                                        <div class="wip-item" data-src="media/gallery/13.jpg"
+                                             style="background-image: url(media/gallery/13.jpg);">
+                                            <img src="media/gallery/thumbs/13.jpg" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="wi-stats clearfix">
+                                        <div class="wis-numbers">
+                                            <span><i class="zmdi zmdi-comments"></i> 100</span>
+                                            <span class="active"><i class="zmdi zmdi-favorite"></i> 2432</span>
+                                        </div>
+
+                                        <div class="wis-commentors">
+                                            <a href="#"><img src="img/profile-pics/1.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/7.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/9.jpg" alt=""></a>
+                                            <a href="#"><img src="img/profile-pics/8.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wi-comments">
+
+                                    <!-- Comment Listing -->
+                                    <div class="list-group">
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/9.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Finn Walking <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Per conubia nostra.</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/8.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Benn Holder <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Class aptent taciti sociosqu ad litora torquent per conubia nostra...</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item media">
+                                            <a href="#" class="pull-left">
+                                                <img src="img/profile-pics/3.jpg" alt="" class="lgi-img">
+                                            </a>
+
+                                            <div class="media-body">
+                                                <a href="#" class="lgi-heading">Seam Ford <small class="c-gray m-l-10">3rd July 2015</small></a>
+                                                <small class="lgi-text">Praesent bibendum vulputate nulla vitae euismod. Fusce a metus eu ante sagittis viverra sit amet sed odio.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment form -->
+                                    <div class="wic-form">
+                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
+
+                                        <div class="wicf-actions text-right">
+                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
+                                            <button class="btn btn-sm btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom:-40px;padding-left:20px;padding-right:20px;background:;text-align:center;"><a href="content-1a.html">MORE TUTORIAL CORELDRAW</a></div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-2">
+
+                    <div class="card" style="margin-left:-20px;margin-right:-20px;margin-top:-20px;margin-bottom:-120px;background:#ffffff;">
+                        <div style="background:#ffffff;height:10px;"></div>
+                            <table id="grid-basic" class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th data-column-id="id" data-type="text">MENU</th>
+                                        <th data-column-id="link" data-formatter="link" data-order="asc">COMMAND</th>
+                                        <th data-column-id="github" data-formatter="github">SHORTCUT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>New</td>
+                                        <td>Ctrl + N</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View</td>
+                                        <td>Full-Screen Preview</td>
+                                        <td>F9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Undo</td>
+                                        <td>Ctrl + Z</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View</td>
+                                        <td>View Manager</td>
+                                        <td>Ctrl + F2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Open</td>
+                                        <td>Ctrl + O</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View > Snap to</td>
+                                        <td>Document Grid</td>
+                                        <td>Ctrl + Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Redo</td>
+                                        <td>Ctrl + Shift + Z</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View > Snap to</td>
+                                        <td>Objects</td>
+                                        <td>Alt + Z</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Save</td>
+                                        <td>Ctrl + S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View</td>
+                                        <td>Dynamic Guides</td>
+                                        <td>Alt + Shift + D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Repeat</td>
+                                        <td>Ctrl + R</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View</td>
+                                        <td>Alignment Guides</td>
+                                        <td>Alt + Shift + A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Save As</td>
+                                        <td>Ctrl + Shift + S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Cut</td>
+                                        <td>Ctrl + X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Import</td>
+                                        <td>Ctrl + I</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Copy</td>
+                                        <td>Ctrl + C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Export</td>
+                                        <td>Ctrl + E</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Paste</td>
+                                        <td>Ctrl + V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Print</td>
+                                        <td>Ctrl + P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Delete</td>
+                                        <td>Delete</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File</td>
+                                        <td>Exit</td>
+                                        <td>Alt + F4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit > Symbol</td>
+                                        <td>Symbol Manager</td>
+                                        <td>Ctrl + F3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Duplicate</td>
+                                        <td>Ctrl + D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Step and Repeat</td>
+                                        <td>Ctrl + Shift + D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit > Find and Replace</td>
+                                        <td>Find Objects</td>
+                                        <td>Ctrl + F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edit</td>
+                                        <td>Object Properties</td>
+                                        <td>Alt + Enter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Transformations</td>
+                                        <td>Position</td>
+                                        <td>Alt + F7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Transformations</td>
+                                        <td>Rotate</td>
+                                        <td>Alt + F8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Transformations</td>
+                                        <td>Scale</td>
+                                        <td>Alt + F9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Transformations</td>
+                                        <td>Size</td>
+                                        <td>Alt + F10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Align Left</td>
+                                        <td>L</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Align Right</td>
+                                        <td>R</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Align Top</td>
+                                        <td>T</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Align and Distribute > Align Bottom</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Align Centers Horizontally</td>
+                                        <td>E</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Align Centers Vertically</td>
+                                        <td>C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Align and Distribute</td>
+                                        <td>Center to Page</td>
+                                        <td>P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>To front of Page</td>
+                                        <td>Ctrl + Home</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>To Back of Page</td>
+                                        <td>Ctrl + End</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>To Front of Layer</td>
+                                        <td>Shift+ Page Up</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>To Back of Layer</td>
+                                        <td>Shift+ Page Down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>Forward One</td>
+                                        <td>Ctrl + Page Up</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange > Order</td>
+                                        <td>Backward One</td>
+                                        <td>Ctrl + Page Down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Group</td>
+                                        <td>Ctrl + G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Ungroup</td>
+                                        <td>Ctrl + U</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Combine</td>
+                                        <td>Ctrl + L</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Break Apart</td>
+                                        <td>Ctrl + K</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Convert to Curves</td>
+                                        <td>Ctrl + Q</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrange</td>
+                                        <td>Convert Outline to Object</td>
+                                        <td>Ctrl + Shift + Q</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects > Adjust</td>
+                                        <td>Brightness/Contrast/Intensity</td>
+                                        <td>Ctrl + B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects > Adjust</td>
+                                        <td>Color Balance</td>
+                                        <td>Ctrl + Shift + B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects > Adjust</td>
+                                        <td>Hue/saturation/Lightness</td>
+                                        <td>Ctrl + Shift + U</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects</td>
+                                        <td>Contour</td>
+                                        <td>Ctrl + F9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects</td>
+                                        <td>Envelope</td>
+                                        <td>Ctrl + F7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effects</td>
+                                        <td>Lens</td>
+                                        <td>Ctrl + F3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text</td>
+                                        <td>Text Properties</td>
+                                        <td>Ctrl + T</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text</td>
+                                        <td>Edit Text</td>
+                                        <td>Ctrl + Shift + T</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text</td>
+                                        <td>Insert Symbol Character</td>
+                                        <td>Ctrl + F11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text > Insert Formating Code</td>
+                                        <td>Non-breaking Hypen</td>
+                                        <td>Ctrl + Shift + -</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text > Insert Formating Code</td>
+                                        <td>Optional Hypen</td>
+                                        <td>Ctrl + -</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text</td>
+                                        <td>Align to Baseline</td>
+                                        <td>Alt + F12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text > Writing Tools</td>
+                                        <td>Spell Check</td>
+                                        <td>Ctrl + F12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Text</td>
+                                        <td>Convert</td>
+                                        <td>Ctrl + F8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools</td>
+                                        <td>Options</td>
+                                        <td>Ctrl + J</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools</td>
+                                        <td>View Manager</td>
+                                        <td>Ctrl + F2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools</td>
+                                        <td>Color Styles</td>
+                                        <td>Ctrl + F6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools</td>
+                                        <td>Object Styles</td>
+                                        <td>Ctrl + F5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>Macro Manager</td>
+                                        <td>Alt + Shift + F11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>Macro Editor</td>
+                                        <td>Alt + F11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>VSTA Editor</td>
+                                        <td>Alt + Shift + F12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>Stop Recording</td>
+                                        <td>Ctrl + Shift + O</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>Record Temporary Macro</td>
+                                        <td>Ctrl + Shift + R</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tools > Macros</td>
+                                        <td>Run Temporary Macro</td>
+                                        <td>Ctrl + Shift + P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Help</td>
+                                        <td>Help Topics</td>
+                                        <td>F1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Window</td>
+                                        <td>Refresh Window</td>
+                                        <td>Ctrl + W</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other</td>
+                                        <td>Nudge</td>
+                                        <td>Arrow keys</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other</td>
+                                        <td>Super Nudge</td>
+                                        <td>Shift + Arrow Keys</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other</td>
+                                        <td>Micro Nudge</td>
+                                        <td>Ctrl + Arrow Keys</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other</td>
+                                        <td>Scroll</td>
+                                        <td>Alt + Arrow Keys</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                    </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+
+        <div class="login-content" style="background:#ffffff;">
+            <!-- Login -->
+            <div style="margin-bottom:250px;" class="lc-block toggled" id="l-login">
+                <div class="lcb-form">
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="fg-line">
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                    </div>
+
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
+                        <div class="fg-line">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                            <i class="input-helper"></i>
+                            Keep me signed in
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="lcb-navigation">
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-register"><i class="zmdi zmdi-plus"></i> <span>Register</span></a>
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Help Instruction</span></a>
+                </div>
+            </div>
+
+            <!-- Register -->
+            <div style="margin-bottom:250px;" class="lc-block" id="l-register">
+                <div class="lcb-form">
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="fg-line">
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                    </div>
+
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                        <div class="fg-line">
+                            <input type="text" class="form-control" placeholder="Email Address">
+                        </div>
+                    </div>
+
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
+                        <div class="fg-line">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lcb-navigation">
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-login"><i class="zmdi zmdi-long-arrow-right"></i> <span>Sign in</span></a>
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
+                </div>
+            </div>
+
+            <!-- Forgot Password -->
+            <div style="margin-bottom:250px;" class="lc-block" id="l-forget-password">
+                <div class="lcb-form">
+                    <p class="text-left">Sorry, only admin can log in. Are you're IDWEBDesigner team?, enter your email address bellow to login instructions.</p>
+
+                    <div class="input-group m-b-20">
+                        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                        <div class="fg-line">
+                            <input type="text" class="form-control" placeholder="Email Address">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lcb-navigation">
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-login"><i class="zmdi zmdi-long-arrow-right"></i> <span>Sign in</span></a>
+                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-register"><i class="zmdi zmdi-plus"></i> <span>Register</span></a>
+                </div>
+            </div>
+        </div>
+
+                                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script src="shuffleText/js/shuffletext.jquery.min.js"></script>
+        <script>
+         $('.demo').ShuffleText([
+          'Please wait...',
+          "Connecting server...",
+          "Load Javascript Database",
+          "Build User Interface...",
+          "Please wait...",
+            ],{loop: false, delay: 1000});
+        </script>
+
+    </body>
+
+</html>
