@@ -5,6 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Javascript Database</title>
 
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
         <!-- Vendor CSS -->
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
@@ -24,28 +32,22 @@
         $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/content-right.html");
         });</script>
 
-         <script type="text/javascript">
-          <!--
-          if (screen.width >= 2800) {
-            window.location = "http://designer.web.id";
-          }
-          //-->
-        </script>
-    <style>.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: auto;
-	height: 200px;;
-}
-    .lcb-navigation a{background:#999999}
-    </style>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 200px;;
+        }
+        .lcb-navigation a{background:#999999}
+        </style>
+
     </head>
     <body style="background:#ffffff">
 
@@ -247,14 +249,102 @@
             </aside>
 
             <section id="content" style="margin-bottom:-40px;">
-                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                <div class="container" style="margin-top:-55px;;">
                     <div class="tab-content p-20" style="background:#ffffff;">
 
-                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+                    <div style="margin-left:-20px;margin-right:-20px;" role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+                        <h5>Editor's Choice</h5><span style="float:right;margin-top:-25px;color:#999999"><a href="editorchoice.html">VIEW ALL</a></span>
 
-                            <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr></tr>
+                                    <tr>
+                                        <td><div class="c-item" style="margin-left:-30px;">
+                                            <a href="pouchdb.html" >
+                                                <img src="img/f1.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                        <td><div class="c-item" style="margin-left:-20px;">
+                                            <a href="redis.html" class="ci-avatar">
+                                                <img src="img/f2.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                        <td><div class="c-item" style="margin-left:-20px;">
+                                            <a href="titan.html" class="ci-avatar">
+                                                <img src="img/f3.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                        <td><div class="c-item" style="margin-left:-20px;">
+                                            <a href="mongo.html" class="ci-avatar">
+                                                <img src="img/f4.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                        <td><div class="c-item" style="margin-left:-20px;">
+                                            <a href="orientdb.html" class="ci-avatar">
+                                                <img src="img/f5.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                        <td><div class="c-item" style="margin-left:-20px;margin-right:-30px;">
+                                            <a href="editorchoice.html" class="ci-avatar">
+                                                <img src="img/fr.jpg" alt="" style="width:125px;">
+                                            </a>
+                                        </div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Recent Items -->
+                        <div class="card">
+                                <div class="card-header">
+                                    <h2>NoSQL Databases<small>The ultimate reference source of NoSQL Databases.<br/>Ain't no party like a NoSQL party!</small></h2>
+                                    <ul class="actions">
+                                        <li class="dropdown">
+                                            <a href="#" data-toggle="dropdown">
+                                                <i class="zmdi zmdi-more-vert"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <span style="margin-left:20px;font-size:10px;color:#888888;">OUR SISTER APPS</span>
+                                                <li>
+                                                    <a href="market://details?id=id.web.designer.learn.virtualreality"><i class="zmdi zmdi-google-play"></i> &nbsp;&nbsp;Learn Virtual Reality</a>
+                                                </li>
+                                                <li>
+                                                    <a href="market://details?id=id.web.designer.learn.javascript"><i class="zmdi zmdi-google-play"></i> &nbsp;&nbsp;Learn Javascript</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="help.html"><i class="zmdi zmdi-help"></i> &nbsp;&nbsp;Help</a>
+                                                </li>
+                                                <li style="display:none;">
+                                                    <a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i> &nbsp;&nbsp;Upgrade</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body m-t-0 scroll">
+
+                            <div class="card" style="background:#f0f0f0;">
+                                <div class="card-header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="img/profile-pics/2.jpg" alt="">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h2>Shane Wtson
+                                                <small>Posted on 20th July 2015 at 7:00</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="card-body card-padding">
+                                    <p>Donec a ipsum eu tellus auctor sodales. Nulla facilisi. Praesent et ex finibus, tempor arcu interdum, facilisis mi. Nunc blandit hendrerit nulla, sed rutrum risus. Nulla eu mollis massa, et laoreet nulla. Ut ut dolor et arcu eleifend elementum ut eget tellus. Vestibulum eu hendrerit mauris. Suspendisse id tortor vel nisl tincidunt interdum.</p>
+
                                     <div class="wi-preview lightbox clearfix">
                                         <div class="wip-item" data-src="media/gallery/6.jpg"
                                              style="background-image: url(media/gallery/6.jpg);">
@@ -341,528 +431,637 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Comment form -->
-                                    <div class="wic-form">
-                                        <textarea placeholder="Write something..." data-ma-action="wall-comment-open"></textarea>
-
-                                        <div class="wicf-actions text-right">
-                                            <button class="btn btn-sm btn-link" data-ma-action="wall-comment-close">Cancel</button>
-                                            <button class="btn btn-sm btn-primary">Post</button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
-                            <div style="margin-bottom:-40px;padding-left:20px;padding-right:20px;background:;text-align:center;"><a href="content-1a.html">MORE TUTORIAL CORELDRAW</a></div>
+                                    <div style="padding-top:20px;padding-bottom:50px;padding-left:20px;padding-right:20px;background:;text-align:center;"><a href="content-1a.html">More NoSQL Databases</a></div>
+                                    <script>$('.scroll').jscroll({    autoTrigger: false});</script>
+                                </div>
 
+                            </div>
                     </div>
 
                     <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-2">
 
-                    <div class="card" style="margin-left:-20px;margin-right:-20px;margin-top:-20px;margin-bottom:-120px;background:#ffffff;">
-                        <div style="background:#ffffff;height:10px;"></div>
+                    <div class="card" style="margin-left:-20px;margin-right:-20px;margin-top:-20px;margin-bottom:-120px;background:#212B31;">
+                        <div style="background:#212B31;height:10px;"></div>
+
                             <table id="grid-basic" class="table table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th data-column-id="id" data-type="text">MENU</th>
-                                        <th data-column-id="link" data-formatter="link" data-order="asc">COMMAND</th>
-                                        <th data-column-id="github" data-formatter="github">SHORTCUT</th>
+                                        <th data-column-id="id" data-type="text">NAME</th>
+                                        <th data-column-id="link" data-formatter="link">WEBSITE</th>
+                                        <th data-column-id="github" data-formatter="github">GITHUB</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>File</td>
-                                        <td>New</td>
-                                        <td>Ctrl + N</td>
+                                        <td>Redis</td>
+                                        <td>redis.io</td>
+                                        <td>antirez/redis</td>
                                     </tr>
                                     <tr>
-                                        <td>View</td>
-                                        <td>Full-Screen Preview</td>
-                                        <td>F9</td>
+                                        <td>RethinkDB</td>
+                                        <td>rethinkdb.com</td>
+                                        <td>rethinkdb/rethinkdb</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Undo</td>
-                                        <td>Ctrl + Z</td>
+                                        <td>Mongo</td>
+                                        <td>mongodb.com</td>
+                                        <td>mongodb/mongo</td>
                                     </tr>
                                     <tr>
-                                        <td>View</td>
-                                        <td>View Manager</td>
-                                        <td>Ctrl + F2</td>
+                                        <td>PouchDB</td>
+                                        <td>pouchdb.com</td>
+                                        <td>pouchdb/pouchdb</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Open</td>
-                                        <td>Ctrl + O</td>
+                                        <td>Titan</td>
+                                        <td>titandb.io</td>
+                                        <td>thinkaurelius/titan</td>
                                     </tr>
                                     <tr>
-                                        <td>View > Snap to</td>
-                                        <td>Document Grid</td>
-                                        <td>Ctrl + Y</td>
+                                        <td>FlockDB</td>
+                                        <td>twitter.github.io</td>
+                                        <td>twitter/flockdb</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Redo</td>
-                                        <td>Ctrl + Shift + Z</td>
+                                        <td>Neo4j</td>
+                                        <td>neo4j.com</td>
+                                        <td>neo4j/neo4j</td>
                                     </tr>
                                     <tr>
-                                        <td>View > Snap to</td>
-                                        <td>Objects</td>
-                                        <td>Alt + Z</td>
+                                        <td>CouchDB</td>
+                                        <td>couchdb.apache.org</td>
+                                        <td>apache/couchdb</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Save</td>
-                                        <td>Ctrl + S</td>
+                                        <td>Riak</td>
+                                        <td>docs.basho.com</td>
+                                        <td>basho/riak</td>
                                     </tr>
                                     <tr>
-                                        <td>View</td>
-                                        <td>Dynamic Guides</td>
-                                        <td>Alt + Shift + D</td>
+                                        <td>OrientDB</td>
+                                        <td>orientdb.com</td>
+                                        <td>orientechnologies/orientdb</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Repeat</td>
-                                        <td>Ctrl + R</td>
+                                        <td>ArangoDB</td>
+                                        <td>arangodb.com</td>
+                                        <td>arangodb/arangodb</td>
                                     </tr>
                                     <tr>
-                                        <td>View</td>
-                                        <td>Alignment Guides</td>
-                                        <td>Alt + Shift + A</td>
+                                        <td>MapDB</td>
+                                        <td>mapdb.org</td>
+                                        <td>jankotek/mapdb</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Save As</td>
-                                        <td>Ctrl + Shift + S</td>
+                                        <td>RavenDB</td>
+                                        <td>ravendb.net</td>
+                                        <td>ravendb/ravendb</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Cut</td>
-                                        <td>Ctrl + X</td>
+                                        <td>A-Frame</td>
+                                        <td>aframe.io</td>
+                                        <td>aframevr/aframe</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Import</td>
-                                        <td>Ctrl + I</td>
+                                        <td>OpenVR</td>
+                                        <td>steamvr.com</td>
+                                        <td>ValveSoftware/openvr</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Copy</td>
-                                        <td>Ctrl + C</td>
+                                        <td>Google VR SDK</td>
+                                        <td>developers.google.com/vr/android</td>
+                                        <td>googlevr/gvr-android-sdk</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Export</td>
-                                        <td>Ctrl + E</td>
+                                        <td>Google VR SDK for Unity</td>
+                                        <td>developers.google.com/vr/unity</td>
+                                        <td>googlevr/gvr-unity-sdk</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Paste</td>
-                                        <td>Ctrl + V</td>
+                                        <td>Revive</td>
+                                        <td>null</td>
+                                        <td>LibreVR/Revive</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Print</td>
-                                        <td>Ctrl + P</td>
+                                        <td>Surround360</td>
+                                        <td>facebook360.fb.com/facebook-surround-360</td>
+                                        <td>facebook/Surround360</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Delete</td>
-                                        <td>Delete</td>
+                                        <td>WebVR Boilerplate</td>
+                                        <td>smus.com/responsive-vr</td>
+                                        <td>borismus/webvr-boilerplate</td>
                                     </tr>
                                     <tr>
-                                        <td>File</td>
-                                        <td>Exit</td>
-                                        <td>Alt + F4</td>
+                                        <td>VR View</td>
+                                        <td>developers.google.com/vr/concepts/vrview</td>
+                                        <td>google/vrview</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit > Symbol</td>
-                                        <td>Symbol Manager</td>
-                                        <td>Ctrl + F3</td>
+                                        <td>RiftSketch</td>
+                                        <td>brianpeiris.github.io/RiftSketch</td>
+                                        <td>brianpeiris/RiftSketch</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Duplicate</td>
-                                        <td>Ctrl + D</td>
+                                        <td>SteamVR Unity Toolkit</td>
+                                        <td>steamvr-unity-toolkit.readme.io</td>
+                                        <td>thestonefox/SteamVR_Unity_Toolkit</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Step and Repeat</td>
-                                        <td>Ctrl + Shift + D</td>
+                                        <td>eleVR</td>
+                                        <td>elevr.com</td>
+                                        <td>hawksley/eleVR-Web-Player</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit > Find and Replace</td>
-                                        <td>Find Objects</td>
-                                        <td>Ctrl + F</td>
+                                        <td>Newton VR</td>
+                                        <td>tomorrowtodaylabs.com</td>
+                                        <td>TomorrowTodayLabs/NewtonVR</td>
                                     </tr>
                                     <tr>
-                                        <td>Edit</td>
-                                        <td>Object Properties</td>
-                                        <td>Alt + Enter</td>
+                                        <td>GearVRf</td>
+                                        <td>gearvrf.org</td>
+                                        <td>Samsung/GearVRf</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Transformations</td>
-                                        <td>Position</td>
-                                        <td>Alt + F7</td>
+                                        <td>AngularJS</td>
+                                        <td>angular.io</td>
+                                        <td>angular/angular</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Transformations</td>
-                                        <td>Rotate</td>
-                                        <td>Alt + F8</td>
+                                        <td>React</td>
+                                        <td>facebook.github.io/react</td>
+                                        <td>facebook/react</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Transformations</td>
-                                        <td>Scale</td>
-                                        <td>Alt + F9</td>
+                                        <td>Three.js</td>
+                                        <td>threejs.org</td>
+                                        <td>mrdoob/three.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Transformations</td>
-                                        <td>Size</td>
-                                        <td>Alt + F10</td>
+                                        <td>Chart.js</td>
+                                        <td>chartjs.org</td>
+                                        <td>chartjs/Chart.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Align Left</td>
-                                        <td>L</td>
+                                        <td>Moment</td>
+                                        <td>momentjs.com</td>
+                                        <td>moment/moment</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Align Right</td>
-                                        <td>R</td>
+                                        <td>Ember</td>
+                                        <td>emberjs.com</td>
+                                        <td>emberjs/ember.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Align Top</td>
-                                        <td>T</td>
+                                        <td>Redux</td>
+                                        <td>rackt.github.io/redux</td>
+                                        <td>rackt/redux</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Align and Distribute > Align Bottom</td>
-                                        <td>B</td>
+                                        <td>Foundation</td>
+                                        <td>foundation.zurb.com</td>
+                                        <td>zurb/foundation-sites</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Align Centers Horizontally</td>
-                                        <td>E</td>
+                                        <td>Vue</td>
+                                        <td>vuejs.org</td>
+                                        <td>vuejs/vue</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Align Centers Vertically</td>
-                                        <td>C</td>
+                                        <td>Ionic</td>
+                                        <td>ionicframework.com</td>
+                                        <td>driftyco/ionic</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Align and Distribute</td>
-                                        <td>Center to Page</td>
-                                        <td>P</td>
+                                        <td>Backbone</td>
+                                        <td>backbonejs.org</td>
+                                        <td>jashkenas/backbone</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>To front of Page</td>
-                                        <td>Ctrl + Home</td>
+                                        <td>Meteor</td>
+                                        <td>meteor.com</td>
+                                        <td>meteor/meteor</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>To Back of Page</td>
-                                        <td>Ctrl + End</td>
+                                        <td>jQuery</td>
+                                        <td>jquery.com</td>
+                                        <td>jquery/jquery</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>To Front of Layer</td>
-                                        <td>Shift+ Page Up</td>
+                                        <td>Video.js</td>
+                                        <td>videojs.com</td>
+                                        <td>videojs/video.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>To Back of Layer</td>
-                                        <td>Shift+ Page Down</td>
+                                        <td>PhantomJS</td>
+                                        <td>phantomjs.org</td>
+                                        <td>ariya/phantomjs</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>Forward One</td>
-                                        <td>Ctrl + Page Up</td>
+                                        <td>Leaflet</td>
+                                        <td>leafletjs.com</td>
+                                        <td>Leaflet/Leaflet</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange > Order</td>
-                                        <td>Backward One</td>
-                                        <td>Ctrl + Page Down</td>
+                                        <td>Underscore</td>
+                                        <td>underscorejs.org</td>
+                                        <td>jashkenas/underscore</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Group</td>
-                                        <td>Ctrl + G</td>
+                                        <td>Reveal.js</td>
+                                        <td>lab.hakim.se/reveal-js</td>
+                                        <td>hakimel/reveal.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Ungroup</td>
-                                        <td>Ctrl + U</td>
+                                        <td>Select2</td>
+                                        <td>select2.github.io/</td>
+                                        <td>select2/select2</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Combine</td>
-                                        <td>Ctrl + L</td>
+                                        <td>Babel</td>
+                                        <td>babeljs.io</td>
+                                        <td>babel/babel</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Break Apart</td>
-                                        <td>Ctrl + K</td>
+                                        <td>Gulp</td>
+                                        <td>gulpjs.com</td>
+                                        <td>gulpjs/gulp</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Convert to Curves</td>
-                                        <td>Ctrl + Q</td>
+                                        <td>Webpack</td>
+                                        <td>webpack.github.io</td>
+                                        <td>webpack/webpack</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrange</td>
-                                        <td>Convert Outline to Object</td>
-                                        <td>Ctrl + Shift + Q</td>
+                                        <td>Modernizr</td>
+                                        <td>modernizr.com</td>
+                                        <td>Modernizr/Modernizr</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects > Adjust</td>
-                                        <td>Brightness/Contrast/Intensity</td>
-                                        <td>Ctrl + B</td>
+                                        <td>Less.js</td>
+                                        <td>lesscss.org</td>
+                                        <td>less/less.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects > Adjust</td>
-                                        <td>Color Balance</td>
-                                        <td>Ctrl + Shift + B</td>
+                                        <td>Code Mirror</td>
+                                        <td>codemirror.net</td>
+                                        <td>marijnh/CodeMirror</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects > Adjust</td>
-                                        <td>Hue/saturation/Lightness</td>
-                                        <td>Ctrl + Shift + U</td>
+                                        <td>Animate</td>
+                                        <td>daneden.github.io/animate.css</td>
+                                        <td>daneden/animate.css</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects</td>
-                                        <td>Contour</td>
-                                        <td>Ctrl + F9</td>
+                                        <td>Ace</td>
+                                        <td>ace.ajax.org</td>
+                                        <td>ajaxorg/ace</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects</td>
-                                        <td>Envelope</td>
-                                        <td>Ctrl + F7</td>
+                                        <td>Socket</td>
+                                        <td>socket.io</td>
+                                        <td>LearnBoost/socket.io</td>
                                     </tr>
                                     <tr>
-                                        <td>Effects</td>
-                                        <td>Lens</td>
-                                        <td>Ctrl + F3</td>
+                                        <td>Bluebird</td>
+                                        <td>bluebirdjs.com/docs/getting-started.html</td>
+                                        <td>petkaantonov/bluebird</td>
                                     </tr>
                                     <tr>
-                                        <td>Text</td>
-                                        <td>Text Properties</td>
-                                        <td>Ctrl + T</td>
+                                        <td>Express</td>
+                                        <td>expressjs.com</td>
+                                        <td>strongloop/express</td>
                                     </tr>
                                     <tr>
-                                        <td>Text</td>
-                                        <td>Edit Text</td>
-                                        <td>Ctrl + Shift + T</td>
+                                        <td>Slick</td>
+                                        <td>kenwheeler.github.io/slick</td>
+                                        <td>kenwheeler/slick</td>
                                     </tr>
                                     <tr>
-                                        <td>Text</td>
-                                        <td>Insert Symbol Character</td>
-                                        <td>Ctrl + F11</td>
+                                        <td>PDF.js</td>
+                                        <td>mozilla.github.io/pdf.js</td>
+                                        <td>mozilla/pdf.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Text > Insert Formating Code</td>
-                                        <td>Non-breaking Hypen</td>
-                                        <td>Ctrl + Shift + -</td>
+                                        <td>Async</td>
+                                        <td>caolan.github.io/async</td>
+                                        <td>caolan/async</td>
                                     </tr>
                                     <tr>
-                                        <td>Text > Insert Formating Code</td>
-                                        <td>Optional Hypen</td>
-                                        <td>Ctrl + -</td>
+                                        <td>Rx JS</td>
+                                        <td>reactivex.io</td>
+                                        <td>Reactive-Extensions/RxJS</td>
                                     </tr>
                                     <tr>
-                                        <td>Text</td>
-                                        <td>Align to Baseline</td>
-                                        <td>Alt + F12</td>
+                                        <td>Bootstrap Datepicker</td>
+                                        <td>eyecon.ro/bootstrap-datepicker</td>
+                                        <td>eternicode/bootstrap-datepicker</td>
                                     </tr>
                                     <tr>
-                                        <td>Text > Writing Tools</td>
-                                        <td>Spell Check</td>
-                                        <td>Ctrl + F12</td>
+                                        <td>Lodash</td>
+                                        <td>lodash.com</td>
+                                        <td>lodash/lodash</td>
                                     </tr>
                                     <tr>
-                                        <td>Text</td>
-                                        <td>Convert</td>
-                                        <td>Ctrl + F8</td>
+                                        <td>D3</td>
+                                        <td>d3js.org</td>
+                                        <td>d3/d3</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools</td>
-                                        <td>Options</td>
-                                        <td>Ctrl + J</td>
+                                        <td>Polymer</td>
+                                        <td>polymer-project.org</td>
+                                        <td>Polymer/polymer</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools</td>
-                                        <td>View Manager</td>
-                                        <td>Ctrl + F2</td>
+                                        <td>Flux</td>
+                                        <td>facebook.github.io/flux</td>
+                                        <td>facebook/flux</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools</td>
-                                        <td>Color Styles</td>
-                                        <td>Ctrl + F6</td>
+                                        <td>Bower</td>
+                                        <td>bower.io</td>
+                                        <td>bower/bower</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools</td>
-                                        <td>Object Styles</td>
-                                        <td>Ctrl + F5</td>
+                                        <td>jQuery File Upload Plugin</td>
+                                        <td>blueimp.github.io/jQuery-File-Upload</td>
+                                        <td>blueimp/jQuery-File-Upload</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>Macro Manager</td>
-                                        <td>Alt + Shift + F11</td>
+                                        <td>Mocha</td>
+                                        <td>mochajs.org</td>
+                                        <td>mochajs/mocha</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>Macro Editor</td>
-                                        <td>Alt + F11</td>
+                                        <td>Phaser</td>
+                                        <td>phaser.io</td>
+                                        <td>photonstorm/phaser</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>VSTA Editor</td>
-                                        <td>Alt + Shift + F12</td>
+                                        <td>Full Page</td>
+                                        <td>alvarotrigo.com/fullPage</td>
+                                        <td>alvarotrigo/fullPage.js</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>Stop Recording</td>
-                                        <td>Ctrl + Shift + O</td>
+                                        <td>Chosen</td>
+                                        <td>harvesthq.github.io/chosen</td>
+                                        <td>harvesthq/chosen</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>Record Temporary Macro</td>
-                                        <td>Ctrl + Shift + R</td>
+                                        <td>jQuery UI</td>
+                                        <td>jqueryui.com</td>
+                                        <td>jquery/jquery-ui</td>
                                     </tr>
                                     <tr>
-                                        <td>Tools > Macros</td>
-                                        <td>Run Temporary Macro</td>
-                                        <td>Ctrl + Shift + P</td>
+                                        <td>Jasmine</td>
+                                        <td>jasmine.github.io</td>
+                                        <td>jasmine/jasmine</td>
                                     </tr>
                                     <tr>
-                                        <td>Help</td>
-                                        <td>Help Topics</td>
-                                        <td>F1</td>
+                                        <td>Semantic UI</td>
+                                        <td>semantic-ui.com</td>
+                                        <td>Semantic-Org/Semantic-UI</td>
                                     </tr>
                                     <tr>
-                                        <td>Window</td>
-                                        <td>Refresh Window</td>
-                                        <td>Ctrl + W</td>
+                                        <td>Jade</td>
+                                        <td>jade-lang.com</td>
+                                        <td>github.com/pugjs/pug</td>
                                     </tr>
                                     <tr>
-                                        <td>Other</td>
-                                        <td>Nudge</td>
-                                        <td>Arrow keys</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other</td>
-                                        <td>Super Nudge</td>
-                                        <td>Shift + Arrow Keys</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other</td>
-                                        <td>Micro Nudge</td>
-                                        <td>Ctrl + Arrow Keys</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other</td>
-                                        <td>Scroll</td>
-                                        <td>Alt + Arrow Keys</td>
+                                        <td>Sentry</td>
+                                        <td>getsentry.com</td>
+                                        <td>github.com/getsentry/sentry</td>
                                     </tr>
                                 </tbody>
                             </table>
-
-
                     </div>
 
                     </div>
 
-                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#212B31;margin-bottom:-80px;">
 
+                        <div class="card-body card-padding" style="padding-top:20px;margin-left:25px;margin-right:20px;">
+                             <div class="lightbox photos">
 
-        <div class="login-content" style="background:#ffffff;">
-            <!-- Login -->
-            <div style="margin-bottom:250px;" class="lc-block toggled" id="l-login">
-                <div class="lcb-form">
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
-                        <div class="fg-line">
-                            <input type="text" class="form-control" placeholder="Username">
-                        </div>
-                    </div>
+                                 <div data-src="img/redis.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/redis.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/rethinkdb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/rethinkdb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/mongodb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/mongodb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/pouchdb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/pouchdb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/titan.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/titan.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/flockdb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/flockdb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/neo4j.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/neo4j.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/couch.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/couch.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/riak.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/riak.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/orientdb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/orientdb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/arango.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/arango.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/mapdb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/mapdb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/ravendb.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/ravendb.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/aframe.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/aframe.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/gearvrf.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/gearvrf.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/googlevr.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/googlevr.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/surround360.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/surround360.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/steamvr.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/steamvr.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/revive.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/revive.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/angular.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/angular.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/react.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/react.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/ember.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/ember.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/backbone.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/backbone.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/leaflet.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/leaflet.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/jquery.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/jquery.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/underscore.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/underscore.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/gulp.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/gulp.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/webpack.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/webpack.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/ace.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/ace.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/pdfjs.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/pdfjs.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/mocha.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/mocha.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/three.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/three.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/vue.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/vue.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/jqueryui.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/jqueryui.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/redux.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/redux.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/bower.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/bower.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/bootstrap.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/bootstrap.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/d3.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/d3.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/font-awesome.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/font-awesome.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/ionic.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/ionic.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/jqueryui.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/jqueryui.png" alt="" />
+                                     </div>
+                                 </div>
+                                 <div data-src="img/mocha.png" class="col-md-2 col-sm-4 col-xs-4">
+                                     <div class="lightbox-item p-item">
+                                         <img style="border-style:solid;border-color:#72777A;background:#323B41; border-width:1px;" src="img/mocha.png" alt="" />
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
 
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
-                        <div class="fg-line">
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                    </div>
-
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="">
-                            <i class="input-helper"></i>
-                            Keep me signed in
-                        </label>
-                    </div>
-
-                </div>
-
-                <div class="lcb-navigation">
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-register"><i class="zmdi zmdi-plus"></i> <span>Register</span></a>
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Help Instruction</span></a>
-                </div>
-            </div>
-
-            <!-- Register -->
-            <div style="margin-bottom:250px;" class="lc-block" id="l-register">
-                <div class="lcb-form">
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
-                        <div class="fg-line">
-                            <input type="text" class="form-control" placeholder="Username">
-                        </div>
-                    </div>
-
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
-                        <div class="fg-line">
-                            <input type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                    </div>
-
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
-                        <div class="fg-line">
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="lcb-navigation">
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-login"><i class="zmdi zmdi-long-arrow-right"></i> <span>Sign in</span></a>
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
-                </div>
-            </div>
-
-            <!-- Forgot Password -->
-            <div style="margin-bottom:250px;" class="lc-block" id="l-forget-password">
-                <div class="lcb-form">
-                    <p class="text-left">Sorry, only admin can log in. Are you're IDWEBDesigner team?, enter your email address bellow to login instructions.</p>
-
-                    <div class="input-group m-b-20">
-                        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
-                        <div class="fg-line">
-                            <input type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="lcb-navigation">
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-login"><i class="zmdi zmdi-long-arrow-right"></i> <span>Sign in</span></a>
-                    <a href="#" data-ma-action="login-switch" data-ma-block="#l-register"><i class="zmdi zmdi-plus"></i> <span>Register</span></a>
-                </div>
-            </div>
-        </div>
+                        <div style="height:20px;" class="col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="scroll" style="padding-top:0px;padding-bottom:-50px;background:;text-align:center;"><a href="content-3a.html">LOAD MORE IMAGES</a></div>
+                        <script>$('.scroll').jscroll({    autoTrigger: false});</script>
 
                                         </div>
 
